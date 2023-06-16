@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .header-button {
+        @apply flex hover:bg-zinc-700 rounded-full h-10 w-10 justify-center items-center;
+    }
+}
