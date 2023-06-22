@@ -1,20 +1,21 @@
 type HeaderButtonProps = {
     title: string;
     icon: string;
+    onclick?: any;
 }
-function HeaderButton({title, icon}: HeaderButtonProps) {
+function HeaderButton({title, icon, onclick}: HeaderButtonProps) {
     return (
-        <button className="header-button" title={title}>
+        <button onClick={onclick} className="header-button" title={title}>
             <span className="material-symbols-outlined text-[28px]">{icon}</span>
         </button>
     );
 }
 
-export default function Header() {
+export default function Header({toggleNavBar}: any) {
     return (
         <header className="flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
             <div className="flex items-center gap-4">
-                <HeaderButton title="Toggle Menu" icon="menu" />
+                <HeaderButton onclick={toggleNavBar} title="Toggle Menu" icon="menu" />
                 <div className="flex items-center">
                     <img src="./images/youtube.svg" width='32px' />
                     <h1 className="font-bold text-xl font-sans">YouTube</h1>

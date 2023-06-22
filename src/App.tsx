@@ -4,11 +4,13 @@ import MiniNavBar from './components/MiniNavBar';
 import { useState } from 'react';
 
 export default function App() {
-    const [extendNavBar, setExtendNavBar] = useState(false);
+    const [extendNavBar, setExtendNavBar] = useState(true);
+
+    const toggleNavBar = () => setExtendNavBar(prevState => !prevState);
 
     return (
         <div className="bg-zinc-900 h-screen text-white">
-            <Header />
+            <Header toggleNavBar={toggleNavBar}/>
             { extendNavBar ? <ExtendedNavBar /> : <MiniNavBar /> }
         </div>
     )
