@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import extendedNavBarData from '../data/extendedNavBarData';
+import navBarData from '../data/navBarData';
 
 type NavBarButtonProps = {
    text: string;
@@ -26,7 +26,7 @@ function NavBarButton({ text, icon, expand }: NavBarButtonProps) {
    );
 }
 
-export default function NavBar() {
+export default function ExtendedNavBar() {
    const [showPlaylists, setShowPlaylists] = useState(false);
    const [showSubscriptions, setShowSubscriptions] = useState(false);
 
@@ -39,9 +39,9 @@ export default function NavBar() {
       e.currentTarget.blur();
    }
 
-   const playLists = extendedNavBarData.playLists;
-   const subscriptions = extendedNavBarData.subscriptions;
-   const navbarData = extendedNavBarData.navbarData;
+   const playLists = navBarData.playLists;
+   const subscriptions = navBarData.subscriptions;
+   const navbarData = navBarData.extendedNavbarData;
 
    return (
       <nav className="flex flex-col fixed top-14 bottom-0 left-0 w-60 p-2 overflow-y-hidden hover:overflow-y-scroll">

@@ -6,7 +6,7 @@ const subscriptions = [
    "Subscription 1", "Subscription 2", "Subscription 3", "Subscription 4", "Subscription 5",
    "Subscription 6", "Subscription 7", "Subscription 8", "Subscription 9", "Subscription 10"
 ];
-const navbarData = [
+const extendedNavbarData = [
    { text: "Home", icon: "home" },
    { text: "Shorts", icon: "theaters" },
    { text: "Subscriptions", icon: "subscriptions" },
@@ -26,5 +26,11 @@ const navbarData = [
    { text: "Help", icon: "help" },
    { text: "Send Feedback", icon: "reviews" }
 ];
+const miniNavBarData = [
+   { text: "Home", icon: "home"},
+   { text: "Shorts", icon: "theaters"},
+   { text: "Subscriptions", icon: "subscriptions"},
+   { text: "Library", icon: "video_library"}
+];
 
-export default { playLists, subscriptions, navbarData };
+export default { playLists, subscriptions, extendedNavbarData, miniNavBarData };
