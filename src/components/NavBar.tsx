@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import extendedNavBarData from '../data/extendedNavBarData';
 
 type NavBarButtonProps = {
    text: string;
    icon: string;
+   expand?: any;
 }
 
-function NavBarButton({text, icon}: NavBarButtonProps) {
+function NavBarButton({ text, icon, expand }: NavBarButtonProps) {
    const [isFocused, setIsFocused] = useState(false);
 
    const handleFocus = () => setIsFocused(true);
@@ -13,6 +15,7 @@ function NavBarButton({text, icon}: NavBarButtonProps) {
 
    return (
       <button
+         onClick={expand}
          onFocus={handleFocus}
          onBlur={handleBlur}
          className="flex py-2 px-4 items-center rounded-xl bg-zinc-900 hover:bg-zinc-800 focus:bg-zinc-700"
@@ -25,52 +28,68 @@ function NavBarButton({text, icon}: NavBarButtonProps) {
 
 export default function NavBar() {
    const [showPlaylists, setShowPlaylists] = useState(false);
+   const [showSubscriptions, setShowSubscriptions] = useState(false);
 
-   const playLists = [
-      "Play List 1", "Play List 2", "Play List 3", "Play List 4", "Play List 5",
-      "Play List 6", "Play List 7", "Play List 8", "Play List 9", "Play List 10"
-   ];
-   const subscriptions = [
-      "Subscription 1", "Subscription 2", "Subscription 3", "Subscription 4", "Subscription 5",
-      "Subscription 6", "Subscription 7", "Subscription 8", "Subscription 9", "Subscription 10"
-   ];
+   const handleShowPlaylist = (e: any) => {
+      setShowPlaylists(prevState => !prevState);
+      e.currentTarget.blur();
+   }
+   const handleShowSubscriptions = (e: any) => {
+      setShowSubscriptions(prevState => !prevState);
+      e.currentTarget.blur();
+   }
+
+   const playLists = extendedNavBarData.playLists;
+   const subscriptions = extendedNavBarData.subscriptions;
+   const navbarData = extendedNavBarData.navbarData;
 
    return (
-      <nav className="flex flex-col fixed top-14 bottom-0 left-0 w-60 p-2 overflow-y-scroll">
-         <NavBarButton text="Home" icon="home" />
-         <NavBarButton text="Shorts" icon="theaters" />
-         <NavBarButton text="Subscriptions" icon="subscriptions" />
-         <hr className="my-3"/>
-         <NavBarButton text="Library" icon="video_library" />
-         <NavBarButton text="History" icon="history" />
-         <NavBarButton text="Your Videos" icon="smart_display" />
-         <NavBarButton text="Watch Later" icon="schedule" />
-         <NavBarButton text="Liked Videos" icon="thumb_up" />
+      <nav className="flex flex-col fixed top-14 bottom-0 left-0 w-60 p-2 overflow-y-hidden hover:overflow-y-scroll">
+         { navbarData.slice(0, 3).map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />) }
+
+         <hr className="my-3" />
+
+         { navbarData.slice(3, 8).map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />) }
+
          {
             showPlaylists &&
-            playLists.map((playList) => <NavBarButton text={playList} icon="playlist_play" />)
+            playLists.map((playList, index) => <NavBarButton key={index} text={playList} icon="playlist_play" />)
          }
-         <NavBarButton text="Show more" icon="expand_more" />
-         <hr className="my-3"/>
+         <NavBarButton
+            expand={handleShowPlaylist}
+            text={showPlaylists ? 'Show less' : 'Show more'}
+            icon={showPlaylists ? 'expand_less' : 'expand_more'}
+         />
+
+         <hr className="my-3" />
+
          <h1 className='mx-4 font-semibold'>Subscriptions</h1>
          {
-            subscriptions.map((subscription) => <NavBarButton text={subscription} icon="account_circle" />)
+            subscriptions.slice(0, 5).map((subscription, index) => <NavBarButton key={index} text={subscription} icon="account_circle" />)
          }
-         <hr className='my-3'/>
+         {
+            showSubscriptions &&
+            subscriptions.slice(5).map((subscription, index) => <NavBarButton key={index} text={subscription} icon="account_circle" />)
+         }
+         <NavBarButton
+            expand={handleShowSubscriptions}
+            text={showSubscriptions ? `Show less` : `Show ${subscriptions.length - 5} more`}
+            icon={showSubscriptions ? 'expand_less' : 'expand_more'}
+         />
+
+         <hr className='my-3' />
+
          <h1 className='mx-4 font-semibold'>Explore</h1>
-         <NavBarButton text="Trending" icon="local_fire_department" />
-         <NavBarButton text="Music" icon="music_note" />
-         <NavBarButton text="Gaming" icon="sports_esports" />
-         <NavBarButton text="Sports" icon="trophy" />
-         <hr className='my-3'/>
+         { navbarData.slice(8, 12).map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />) }
+
+         <hr className='my-3' />
+
          <h1 className='mx-4 font-semibold'>More From YouTube</h1>
-         <NavBarButton text="YouTube Studio" icon="token" />
-         <NavBarButton text="YouTube Kids" icon="family_restroom" />
-         <hr className='my-3'/>
-         <NavBarButton text="Settings" icon="settings" />
-         <NavBarButton text="Report History" icon="flag" />
-         <NavBarButton text="Help" icon="help" />
-         <NavBarButton text="Send Feedback" icon="reviews" />
+         { navbarData.slice(12, 14).map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />) }
+
+         <hr className='my-3' />
+
+         { navbarData.slice(14).map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />) }
       </nav>
    );
 }

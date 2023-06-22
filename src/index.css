@@ -11,4 +11,11 @@
     .material-symbols-outlined-fill {
         font-variation-settings: 'FILL' 1;
     }
+    ::-webkit-scrollbar {
+        width: 0.3em;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 1em;
+    }
 }
