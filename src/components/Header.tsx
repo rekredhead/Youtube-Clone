@@ -21,6 +21,7 @@ export default function Header({toggleNavBar}: any) {
                     <h1 className="font-bold text-xl font-sans">YouTube</h1>
                 </div>
             </div>
+            
             <div className="flex items-center w-2/5 gap-3 justify-center">
                 <div className="flex items-center border border-zinc-700 rounded-full overflow-hidden h-10 w-full">
                     <input type="search" className="px-5 w-full h-full bg-transparent outline-none" placeholder="Search" />
@@ -32,6 +33,7 @@ export default function Header({toggleNavBar}: any) {
                 </div>
                 <HeaderButton title="Search with voice" icon="mic" />
             </div>
+
             <div className="flex items-center gap-3">
                 <HeaderButton title="Toggle Dark Mode" icon="dark_mode" />
                 <HeaderButton title="Create" icon="emergency_recording" />
