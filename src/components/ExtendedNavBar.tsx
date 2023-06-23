@@ -44,7 +44,7 @@ export default function ExtendedNavBar() {
    const navbarData = navBarData.extendedNavbarData;
 
    return (
-      <nav className="flex flex-col fixed top-14 bottom-0 left-0 w-60 p-2 overflow-y-hidden hover:overflow-y-scroll">
+      <nav className="border flex flex-col fixed top-14 bottom-0 left-0 w-60 p-2 overflow-y-hidden hover:overflow-y-scroll">
          { navbarData.slice(0, 3).map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />) }
 
          <hr className="my-3" />

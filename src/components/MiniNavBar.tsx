@@ -27,7 +27,7 @@ export default function MiniNavBar(): JSX.Element {
    const navbarData = navBarData.miniNavBarData;
 
    return (
-      <nav className="flex flex-col fixed top-14 bottom-0 left-0 w-20 p-2 gap-4">
+      <nav className="border flex flex-col fixed top-14 bottom-0 left-0 w-20 p-2 gap-4">
          {navbarData.map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />)}
       </nav>
    );

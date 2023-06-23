@@ -13,11 +13,11 @@ function HeaderButton({title, icon, onclick}: HeaderButtonProps) {
 
 export default function Header({toggleNavBar}: any) {
     return (
-        <header className="flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
+        <header className="border flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
             <div className="flex items-center gap-4">
                 <HeaderButton onclick={toggleNavBar} title="Toggle Menu" icon="menu" />
                 <div className="flex items-center">
-                    <img src="./images/youtube.svg" width='32px' />
+                    <img src="./images/youtube.svg" alt='Youtube Logo' width='32px' />
                     <h1 className="font-bold text-xl font-sans">YouTube</h1>
                 </div>
             </div>
