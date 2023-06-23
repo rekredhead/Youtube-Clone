@@ -7,8 +7,8 @@ const videosData = [
         isVerified: false,
         viewCount: 1800,
         time_released: "1 hour",
-        thumbnail_link: "./images/thumbnails/thumbnail_1",
-        pfp_link: "./images/profile-pictures/pfp_1",
+        thumbnail_link: "./images/thumbnails/thumbnail_1.png",
+        pfp_link: "./images/profile-pictures/pfp_1.png",
         link: "https://www.youtube.com/watch?v=70z-ll4UPK8"
     },
     {
@@ -19,8 +19,8 @@ const videosData = [
         isVerified: true,
         viewCount: 3300000,
         time_released: "1 year",
-        thumbnail_link: "./images/thumbnails/thumbnail_2",
-        pfp_link: "./images/profile-pictures/pfp_2",
+        thumbnail_link: "./images/thumbnails/thumbnail_2.png",
+        pfp_link: "./images/profile-pictures/pfp_2.png",
         link: "https://www.youtube.com/watch?v=u7TQz52QmH4"
     },
     {
@@ -31,8 +31,8 @@ const videosData = [
         isVerified: false,
         viewCount: 41000,
         time_released: "19 hours",
-        thumbnail_link: "./images/thumbnails/thumbnail_3",
-        pfp_link: "./images/profile-pictures/pfp_3",
+        thumbnail_link: "./images/thumbnails/thumbnail_3.png",
+        pfp_link: "./images/profile-pictures/pfp_3.png",
         link: "https://www.youtube.com/watch?v=AzHiDG_JN1g"
     },
     {
@@ -43,8 +43,8 @@ const videosData = [
         isVerified: true,
         viewCount: 8700000,
         time_released: "2 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_4",
-        pfp_link: "./images/profile-pictures/pfp_4",
+        thumbnail_link: "./images/thumbnails/thumbnail_4.png",
+        pfp_link: "./images/profile-pictures/pfp_4.png",
         link: "https://www.youtube.com/watch?v=FKDFR0EYsXE"
     },
     {
@@ -55,8 +55,8 @@ const videosData = [
         isVerified: true,
         viewCount: 6300000,
         time_released: "2 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_5",
-        pfp_link: "./images/profile-pictures/pfp_5",
+        thumbnail_link: "./images/thumbnails/thumbnail_5.png",
+        pfp_link: "./images/profile-pictures/pfp_5.png",
         link: "https://www.youtube.com/watch?v=x1sgbx17hLQ"
     },
     {
@@ -67,8 +67,8 @@ const videosData = [
         isVerified: true,
         viewCount: 922000,
         time_released: "5 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_6",
-        pfp_link: "./images/profile-pictures/pfp_6",
+        thumbnail_link: "./images/thumbnails/thumbnail_6.png",
+        pfp_link: "./images/profile-pictures/pfp_6.png",
         link: "https://www.youtube.com/watch?v=QD9AdNXSQe4"
     },
     {
@@ -79,8 +79,8 @@ const videosData = [
         isVerified: true,
         viewCount: 41000,
         time_released: "19 hours",
-        thumbnail_link: "./images/thumbnails/thumbnail_7",
-        pfp_link: "./images/profile-pictures/pfp_7",
+        thumbnail_link: "./images/thumbnails/thumbnail_7.png",
+        pfp_link: "./images/profile-pictures/pfp_7.png",
         link: "https://www.youtube.com/watch?v=yzKpYxR9vsE"
     },
     {
@@ -91,8 +91,8 @@ const videosData = [
         isVerified: true,
         viewCount: 4100000,
         time_released: "1 year",
-        thumbnail_link: "./images/thumbnails/thumbnail_8",
-        pfp_link: "./images/profile-pictures/pfp_8",
+        thumbnail_link: "./images/thumbnails/thumbnail_8.png",
+        pfp_link: "./images/profile-pictures/pfp_8.png",
         link: "https://www.youtube.com/watch?v=AeCd-Go2NMs"
     },
     {
@@ -103,8 +103,8 @@ const videosData = [
         isVerified: false,
         viewCount: 1500000,
         time_released: "1 year",
-        thumbnail_link: "./images/thumbnails/thumbnail_9",
-        pfp_link: "./images/profile-pictures/pfp_9",
+        thumbnail_link: "./images/thumbnails/thumbnail_9.png",
+        pfp_link: "./images/profile-pictures/pfp_9.png",
         link: "https://www.youtube.com/watch?v=dnJUE2ptB5U"
     },
     {
@@ -115,8 +115,8 @@ const videosData = [
         isVerified: false,
         viewCount: 37000,
         time_released: "19 hours",
-        thumbnail_link: "./images/thumbnails/thumbnail_10",
-        pfp_link: "./images/profile-pictures/pfp_10",
+        thumbnail_link: "./images/thumbnails/thumbnail_10.png",
+        pfp_link: "./images/profile-pictures/pfp_10.png",
         link: "https://www.youtube.com/watch?v=_mxAaARwum8"
     },
     {
@@ -127,8 +127,8 @@ const videosData = [
         isVerified: true,
         viewCount: 5300000,
         time_released: "6 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_11",
-        pfp_link: "./images/profile-pictures/pfp_11",
+        thumbnail_link: "./images/thumbnails/thumbnail_11.png",
+        pfp_link: "./images/profile-pictures/pfp_11.png",
         link: "https://www.youtube.com/watch?v=py_qHUjnpVE"
     },
     {
@@ -139,8 +139,8 @@ const videosData = [
         isVerified: true,
         viewCount: 6200000,
         time_released: "3 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_12",
-        pfp_link: "./images/profile-pictures/pfp_12",
+        thumbnail_link: "./images/thumbnails/thumbnail_12.png",
+        pfp_link: "./images/profile-pictures/pfp_12.png",
         link: "https://www.youtube.com/watch?v=572myXhqNI8"
     },
     {
@@ -151,8 +151,8 @@ const videosData = [
         isVerified: true,
         viewCount: 1300000,
         time_released: "11 months",
-        thumbnail_link: "./images/thumbnails/thumbnail_13",
-        pfp_link: "./images/profile-pictures/pfp_13",
+        thumbnail_link: "./images/thumbnails/thumbnail_13.png",
+        pfp_link: "./images/profile-pictures/pfp_13.png",
         link: "https://www.youtube.com/watch?v=3QvUtMoEgUg"
     },
     {
@@ -163,8 +163,8 @@ const videosData = [
         isVerified: true,
         viewCount: 7900000,
         time_released: "2 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_14",
-        pfp_link: "./images/profile-pictures/pfp_14",
+        thumbnail_link: "./images/thumbnails/thumbnail_14.png",
+        pfp_link: "./images/profile-pictures/pfp_14.png",
         link: "https://www.youtube.com/watch?v=SKCrRH-1l_k"
     },
     {
@@ -175,8 +175,8 @@ const videosData = [
         isVerified: true,
         viewCount: 248000,
         time_released: "3 years",
-        thumbnail_link: "./images/thumbnails/thumbnail_15",
-        pfp_link: "./images/profile-pictures/pfp_15",
+        thumbnail_link: "./images/thumbnails/thumbnail_15.png",
+        pfp_link: "./images/profile-pictures/pfp_15.png",
         link: "https://www.youtube.com/watch?v=7wzR4Ig5pTI"
     },
     {
@@ -187,8 +187,8 @@ const videosData = [
         isVerified: true,
         viewCount: 3600000,
         time_released: "1 year",
-        thumbnail_link: "./images/thumbnails/thumbnail_16",
-        pfp_link: "./images/profile-pictures/pfp_16",
+        thumbnail_link: "./images/thumbnails/thumbnail_16.png",
+        pfp_link: "./images/profile-pictures/pfp_16.png",
         link: "https://www.youtube.com/watch?v=wUgwRkXxTDA"
     }
 ];

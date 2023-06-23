@@ -13,7 +13,7 @@ function HeaderButton({title, icon, onclick}: HeaderButtonProps) {
 
 export default function Header({toggleNavBar}: any) {
     return (
-        <header className="border flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
+        <header className="flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
             <div className="flex items-center gap-4">
                 <HeaderButton onclick={toggleNavBar} title="Toggle Menu" icon="menu" />
                 <div className="flex items-center">
