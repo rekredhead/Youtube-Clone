@@ -34,9 +34,9 @@ function VideoCard(props: VideoCardProps): JSX.Element {
    const { title, duration, channel_name, isVerified, viewCount, time_released, thumbnail_link, pfp_link, link } = props.data;
 
    return (
-      <a href={link} target='_blank' className="flex flex-col h-72 w-[22rem] mb-10 overflow-hidden">
-         <div className="flex relative h-48">
-            <img className="flex rounded-2xl" src={thumbnail_link} alt="Thumbnail 1" />
+      <a href={link} target='_blank' className="flex flex-col h-fit mb-10">
+         <div className="h-fit flex relative">
+            <img className="flex rounded-2xl w-full" src={thumbnail_link} alt="Thumbnail 1" />
             <p className="flex absolute bg-black px-1 text-sm bottom-2 right-2 opacity-90 rounded-md">{duration}</p>
          </div>
          <div className="flex mt-2">
@@ -66,7 +66,7 @@ function VideoCard(props: VideoCardProps): JSX.Element {
 export default function Body(): JSX.Element {
 
    return (
-      <main className="grid grid-cols-4 w-full mt-14 ml-60 h-full p-10 overflow-y-scroll">
+      <main className="body-grid mt-14 h-full p-10 overflow-y-scroll">
          {
             videosData.map((videoData) => <VideoCard key={videoData.id} data={videoData} />)
          }

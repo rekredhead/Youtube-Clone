@@ -11,9 +11,11 @@ export default function App() {
 
     return (
         <div className="flex bg-zinc-900 h-screen text-white overflow-hidden">
-            <Header toggleNavBar={toggleNavBar}/>
-            { extendNavBar ? <ExtendedNavBar /> : <MiniNavBar /> }
-            <Body />
+            <Header toggleNavBar={toggleNavBar} />
+            <div className='double-grid w-full'>
+                {extendNavBar ? <ExtendedNavBar /> : <MiniNavBar />}
+                <Body />
+            </div>
         </div>
     )
 }
