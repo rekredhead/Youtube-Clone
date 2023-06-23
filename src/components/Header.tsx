@@ -5,13 +5,17 @@ type HeaderButtonProps = {
 }
 function HeaderButton({title, icon, onclick}: HeaderButtonProps) {
     return (
-        <button onClick={onclick} className="header-button" title={title}>
+        <button
+            onClick={onclick}
+            className="flex hover:bg-zinc-700 rounded-full h-10 w-10 justify-center items-center"
+            title={title}
+        >
             <span className="material-symbols-outlined text-[28px]">{icon}</span>
         </button>
     );
 }
 
-export default function Header({toggleNavBar}: any) {
+export default function Header({toggleNavBar, toggleDarkMode}: any) {
     return (
         <header className="flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
             <div className="flex items-center gap-4">
@@ -35,7 +39,7 @@ export default function Header({toggleNavBar}: any) {
             </div>
 
             <div className="flex items-center gap-3">
-                <HeaderButton title="Toggle Dark Mode" icon="dark_mode" />
+                <HeaderButton onclick={toggleDarkMode} title="Toggle Dark Mode" icon="dark_mode" />
                 <HeaderButton title="Create" icon="emergency_recording" />
                 <HeaderButton title="Notification" icon="notifications" />
                 <button className="bg-purple-500 h-8 w-8 text-lg font-semibold rounded-full" title="Profile">K</button>

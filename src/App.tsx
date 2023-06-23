@@ -6,12 +6,14 @@ import { useState } from 'react';
 
 export default function App() {
     const [extendNavBar, setExtendNavBar] = useState(true);
+    const [darkMode, setDarkMode] = useState(true);
 
     const toggleNavBar = () => setExtendNavBar(prevState => !prevState);
+    const toggleDarkMode = () => setDarkMode(prevState => !prevState);
 
     return (
-        <div className="flex bg-zinc-900 h-screen text-white overflow-hidden">
-            <Header toggleNavBar={toggleNavBar} />
+        <div className={`flex h-screen overflow-hidden ${darkMode ? 'bg-zinc-900 text-white' : 'bg-white text-black'}`}>
+            <Header toggleNavBar={toggleNavBar} toggleDarkMode={toggleDarkMode} />
             <div className='double-grid w-full'>
                 {extendNavBar ? <ExtendedNavBar /> : <MiniNavBar />}
                 <Body />
