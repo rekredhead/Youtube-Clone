@@ -38,8 +38,8 @@ function VideoCard(props: VideoCardProps): JSX.Element {
 
    return (
       <a href={link} target='_blank' className="flex flex-col h-fit mb-10">
-         <div className="h-fit flex relative">
-            <img className="flex rounded-2xl w-full" src={thumbnail_link} alt="Thumbnail 1" />
+         <div className="h-fit flex relative overflow-hidden rounded-2xl">
+            <img className="flex w-full hover:scale-110 duration-200" src={thumbnail_link} alt="Thumbnail 1" />
             <p className="flex absolute text-white bg-black px-1 text-sm bottom-2 right-2 opacity-90 rounded-md">{duration}</p>
          </div>
          <div className="flex mt-2">
