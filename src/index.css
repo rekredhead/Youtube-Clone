@@ -13,6 +13,9 @@
         background-color: gray;
         border-radius: 1em;
     }
+    * {
+        transition: 50ms;
+    }
     .double-grid {
         display: grid;
         grid-template-columns: min-content 1fr;
