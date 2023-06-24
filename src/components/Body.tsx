@@ -1,4 +1,6 @@
 import videosData from "../data/videosData";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 type VideoCardProps = {
    data: {
@@ -31,13 +33,14 @@ function getSimplifiedViewCount(viewCount: number): string {
 }
 
 function VideoCard(props: VideoCardProps): JSX.Element {
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
    const { title, duration, channel_name, isVerified, viewCount, time_released, thumbnail_link, pfp_link, link } = props.data;
 
    return (
       <a href={link} target='_blank' className="flex flex-col h-fit mb-10">
          <div className="h-fit flex relative">
             <img className="flex rounded-2xl w-full" src={thumbnail_link} alt="Thumbnail 1" />
-            <p className="flex absolute bg-black px-1 text-sm bottom-2 right-2 opacity-90 rounded-md">{duration}</p>
+            <p className="flex absolute text-white bg-black px-1 text-sm bottom-2 right-2 opacity-90 rounded-md">{duration}</p>
          </div>
          <div className="flex mt-2">
             <div className="flex w-1/6 px-2 py-1 justify-center">
@@ -46,7 +49,7 @@ function VideoCard(props: VideoCardProps): JSX.Element {
             <div className="w-5/6">
                <h1 className="text-md font-semibold">{title.length > 70 ? title.slice(0, 70) + '...' : title}</h1>
                <div className="mt-1">
-                  <p className="flex text-sm text-zinc-300 items-center gap-1">
+                  <p className={`flex text-sm items-center gap-1 text-zinc-${darkMode ? '300' : '500'}`}>
                      {channel_name}
                      {
                         isVerified &&
@@ -55,7 +58,7 @@ function VideoCard(props: VideoCardProps): JSX.Element {
                         </span>
                      }
                   </p>
-                  <p className="text-sm text-zinc-300">{getSimplifiedViewCount(viewCount)} views &bull; {time_released} ago</p>
+                  <p className={`text-sm text-zinc-${darkMode ? '300' : '500'}`}>{getSimplifiedViewCount(viewCount)} views &bull; {time_released} ago</p>
                </div>
             </div>
          </div>

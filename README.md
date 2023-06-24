@@ -1,5 +1,6 @@
 - Add search function to search the data present only in this webpage
 - The Youtube images will zoom in when hovered
+- Add the handleToggleDarkMode in Header.tsx only - try it only
 
 # Youtube Clone
 - I built this app out of curiosity about React.js and Vite and I have never used these tools before.

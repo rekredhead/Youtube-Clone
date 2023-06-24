@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import navBarData from '../data/navBarData';
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 type NavBarButtonProps = {
    text: string;
    icon: string;
    expand?: any;
 }
-
 function NavBarButton({ text, icon, expand }: NavBarButtonProps) {
-   const [isFocused, setIsFocused] = useState(false);
+   const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+   const backgroundColors = darkMode ? 'hover:bg-zinc-800 focus:bg-zinc-700' : 'hover:bg-zinc-300 focus:bg-zinc-200';
 
+   const [isFocused, setIsFocused] = useState(false);
    const handleFocus = () => setIsFocused(true);
    const handleBlur = () => setIsFocused(false);
 
@@ -18,7 +21,7 @@ function NavBarButton({ text, icon, expand }: NavBarButtonProps) {
          onClick={expand}
          onFocus={handleFocus}
          onBlur={handleBlur}
-         className="flex py-2 px-4 items-center rounded-xl bg-zinc-900 hover:bg-zinc-800 focus:bg-zinc-700"
+         className={`flex py-2 px-4 items-center rounded-xl ${backgroundColors}`}
       >
          <span className={`material-symbols-outlined text-[28px] ${isFocused ? 'material-symbols-outlined-fill' : ''}`}>{icon}</span>
          <h1 className={`ml-6 text-[15px] ${isFocused ? 'font-semibold' : ''}`}>{text}</h1>
