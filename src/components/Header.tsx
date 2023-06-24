@@ -1,5 +1,6 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleDarkMode } from "../store/darkModeReducer";
+import { RootState, AppDispatch } from "../store";
 
 type HeaderButtonProps = {
     title: string;
@@ -20,8 +21,13 @@ function HeaderButton({title, icon, onclick}: HeaderButtonProps) {
     );
 }
 
-export default function Header({toggleNavBar, toggleDarkMode}: any) {
+export default function Header({toggleNavBar}: any) {
     const darkMode = useSelector((state: RootState) => state.darkMode.darkMode);
+    const dispatch: AppDispatch = useDispatch();
+
+    const handleToggleDarkMode = () => {
+        dispatch(toggleDarkMode());
+    };
 
     return (
         <header className="flex fixed top-0 left-0 right-0 items-center px-5 justify-between h-14">
@@ -51,7 +57,7 @@ export default function Header({toggleNavBar, toggleDarkMode}: any) {
             </div>
 
             <div className="flex items-center gap-3">
-                <HeaderButton onclick={toggleDarkMode} title="Toggle Dark Mode" icon="dark_mode" />
+                <HeaderButton onclick={handleToggleDarkMode} title="Toggle Dark Mode" icon="dark_mode" />
                 <HeaderButton title="Create" icon="emergency_recording" />
                 <HeaderButton title="Notification" icon="notifications" />
                 <button className="bg-purple-500 h-8 w-8 text-lg text-white font-semibold rounded-full" title="Profile">K</button>
