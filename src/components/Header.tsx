@@ -41,11 +41,11 @@ export default function Header({toggleNavBar}: any) {
             
             <div className="flex items-center w-2/5 gap-3 justify-center">
                 <div
-                    className={`flex items-center rounded-full overflow-hidden h-10 w-full border border-zinc-${darkMode ? '700' : '300'}`}
+                    className={`flex items-center rounded-full overflow-hidden h-10 w-full border ${darkMode ? 'border-zinc-700' : 'border-zinc-300'}`}
                 >
                     <input type="search" className="px-5 w-full h-full bg-transparent outline-none" placeholder="Search" />
                     <button
-                        className={`flex w-16 h-full justify-center items-center bg-zinc-${darkMode ? '700' : '300'}`}
+                        className={`flex w-16 h-full justify-center items-center ${darkMode ? 'bg-zinc-700' : 'bg-zinc-300'}`}
                         title="Search"
                     >
                         <span className="material-symbols-outlined text-3xl">

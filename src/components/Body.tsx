@@ -49,7 +49,7 @@ function VideoCard(props: VideoCardProps): JSX.Element {
             <div className="w-5/6">
                <h1 className="text-md font-semibold">{title.length > 70 ? title.slice(0, 70) + '...' : title}</h1>
                <div className="mt-1">
-                  <p className={`flex text-sm items-center gap-1 text-zinc-${darkMode ? '300' : '500'}`}>
+                  <p className={`flex text-sm items-center gap-1 ${darkMode ? 'text-zinc-300' : 'text-zinc-500'}`}>
                      {channel_name}
                      {
                         isVerified &&
@@ -58,7 +58,7 @@ function VideoCard(props: VideoCardProps): JSX.Element {
                         </span>
                      }
                   </p>
-                  <p className={`text-sm text-zinc-${darkMode ? '300' : '500'}`}>{getSimplifiedViewCount(viewCount)} views &bull; {time_released} ago</p>
+                  <p className={`text-sm ${darkMode ? 'text-zinc-300' : 'text-zinc-500'}`}>{getSimplifiedViewCount(viewCount)} views &bull; {time_released} ago</p>
                </div>
             </div>
          </div>
