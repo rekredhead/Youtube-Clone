@@ -19,9 +19,9 @@ function NavBarButton({ text, icon }: NavBarButtonProps) {
       <button
          onFocus={handleFocus}
          onBlur={handleBlur}
-         className={`flex flex-col py-2 items-center rounded-xl ${backgroundColors}`}
+         className={`flex flex-col py-2 items-center rounded-xl max-md:py-1 max-md:w-full ${backgroundColors}`}
       >
-         <span className={`material-symbols-outlined text-[28px] ${isFocused ? 'material-symbols-outlined-fill' : ''}`}>{icon}</span>
+         <span className={`material-symbols-outlined text-[28px] max-md:text-2xl ${isFocused ? 'material-symbols-outlined-fill' : ''}`}>{icon}</span>
          <h1 className='text-[10px] text-center'>{text}</h1>
       </button>
    );
@@ -31,7 +31,7 @@ export default function MiniNavBar(): JSX.Element {
    const navbarData = navBarData.miniNavBarData;
 
    return (
-      <nav className="flex flex-col mt-14 w-20 p-2 gap-4">
+      <nav className="flex flex-col mt-14 w-20 p-2 gap-4 max-md:mobileNavBar">
          {navbarData.map((item, index) => <NavBarButton key={index} text={item.text} icon={item.icon} />)}
       </nav>
    );

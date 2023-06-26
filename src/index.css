@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .mobileNavBar {
+        @apply fixed flex-row z-10 bg-inherit left-0 bottom-0 w-full justify-around;
+    }
+}
+
 @layer base {
     .material-symbols-outlined-fill {
         font-variation-settings: 'FILL' 1;
