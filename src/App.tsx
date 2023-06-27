@@ -13,7 +13,7 @@ export default function App() {
     const [extendNavBar, setExtendNavBar] = useState(true);
     const toggleNavBar = () => setExtendNavBar(prevState => !prevState);
 
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth > 768);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
