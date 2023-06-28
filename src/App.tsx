@@ -27,7 +27,7 @@ export default function App() {
 
     return (
         <div className={`flex h-screen overflow-hidden ${darkMode ? 'bg-zinc-900 text-white' : 'bg-white text-black'}`}>
-            <Header toggleNavBar={toggleNavBar} />
+            <Header toggleNavBar={toggleNavBar} isMobile={isMobile} />
             {
                 isMobile ? (
                     <>

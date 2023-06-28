@@ -2,7 +2,6 @@
 - https://rekredhead.github.io/Youtube-Clone/
 
 # Todos
-- Make Site more responsive for mobile - Make isMobile state global using redux
 - Add search function to search the data present only in this webpage
 - Find away to prevent google icons from showing text when being loaded
 
